@@ -1,104 +1,77 @@
 # 2401PTDS_Regression_Project
 
-![](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white)
 
-<div id="main image" align="center">
-  <img src="https://github.com/marcmarais/2401FTDS_Regression_Project/blob/main/agri_image.png" width="450" height="300" alt=""/>
-</div>
-
-## Table of contents
-* [1. Project Overview](#project-description)
+## Table of Contents
+* [1. Project Overview](#project-overview)
 * [2. Dataset](#dataset)
 * [3. Packages](#packages)
 * [4. Environment](#environment)
-* [5. Team Members](#team-members)
+* [5. Instructions to Set Up Environment](#instructions-to-set-up-environment)
+* [6. Team Members](#team-members)
 
-## 1. Project Overview <a class="anchor" id="project-description"></a>
-Your team of environmental consultants and data scientists are tasked by a coalition of agricultural stakeholders to analyse and predict the effect of CO2 emissions on climate change from the agri-food sector. The stakeholders include policymakers, agricultural businesses, and environmental organisations. Your project aims to understand the impact of agricultural activities on climate change and develop strategies for sustainable practices. Utilising a comprehensive dataset compiled from the Food and Agriculture Organization (FAO) and the Intergovernmental Panel on Climate Change (IPCC), you will explore various emission sources, perform regression analysis to predict temperature variations, and offer actionable insights for the stakeholders.
+## 1. Project Overview <a name="project-overview"></a>
+This project aims to analyze and predict the effect of CO2 emissions on climate change from the agri-food sector. The goal is to understand the impact of agricultural activities on climate change and develop strategies for sustainable practices. 
 
-By the end of this project, you will have a thorough understanding of the impact of agricultural activities on CO2 emissions and climate change. Your findings and recommendations will contribute to the ongoing efforts to promote sustainability within the agri-food sector, providing valuable insights for the stakeholders involved in this initiative.
+Utilizing a dataset compiled from the **Food and Agriculture Organization (FAO)** and the **Intergovernmental Panel on Climate Change (IPCC)**, the project explores various emission sources and applies regression analysis to predict temperature variations. Insights and actionable recommendations will be provided to stakeholders, including policymakers and agricultural businesses.
 
-## 2. Dataset <a class="anchor" id="dataset"></a>
-Emissions from the agri-food sector play a crucial role in climate change, as they represent a significant share of global annual emissions. The dataset highlights the substantial contribution of the various sources of emissions. Therefore, it is essential to understand and address the environmental impact of the agri-food industry to mitigate climate change and promote sustainable practices within this sector.
+## 2. Dataset <a name="dataset"></a>
+The dataset contains emissions data from the agri-food sector, with features representing various sources of emissions such as:
+- **Savanna Fires**, **Forest Fires**, **Crop Residues**, **Rice Cultivation**
+- **Food Transport**, **Fertilizers Manufacturing**, **Manure Management**, **Food Processing**
+- **Average Temperature (°C)** as the target variable for prediction.
 
-**Dataset Features:**
-- Savanna fires: Emissions from fires in savanna ecosystems.
-- Forest fires: Emissions from fires in forested areas.
-- Crop Residues: Emissions from burning or decomposing leftover plant material after crop harvesting.
-- Rice Cultivation: Emissions from methane released during rice cultivation.
-- Drained organic soils (CO2): Emissions from carbon dioxide released when draining organic soils.
-- Pesticides Manufacturing: Emissions from the production of pesticides.
-- Food Transport: Emissions from transporting food products.
-- Forestland: Land covered by forests.
-- Net Forest conversion: Change in forest area due to deforestation and afforestation.
-- Food Household Consumption: Emissions from food consumption at the household level.
-- Food Retail: Emissions from the operation of retail establishments selling food.
-- On-farm Electricity Use: Electricity consumption on farms.
-- Food Packaging: Emissions from the production and disposal of food packaging materials.
-- Agrifood Systems Waste Disposal: Emissions from waste disposal in the agrifood system.
-- Food Processing: Emissions from processing food products.
-- Fertilizers Manufacturing: Emissions from the production of fertilizers.
-- IPPU: Emissions from industrial processes and product use.
-- Manure applied to Soils: Emissions from applying animal manure to agricultural soils.
-- Manure left on Pasture: Emissions from animal manure on pasture or grazing land.
-- Manure Management: Emissions from managing and treating animal manure.
-- Fires in organic soils: Emissions from fires in organic soils.
-- Fires in humid tropical forests: Emissions from fires in humid tropical forests.
-- On-farm energy use: Energy consumption on farms.
-- Rural population: Number of people living in rural areas.
-- Urban population: Number of people living in urban areas.
-- Total Population - Male: Total number of male individuals in the population.
-- Total Population - Female: Total number of female individuals in the population.
-- total_emission: Total greenhouse gas emissions from various sources.
-- Average Temperature °C: The average increasing of temperature (by year) in degrees Celsius,
- 
+The features include CO2 emissions (in kilotonnes) and other relevant indicators, such as rural and urban populations, that influence the agri-food sector's impact on climate change.
 
-CO2 is recorded in kilotonnes (kt): 1 kt represents 1000 kg of CO2.
+## 3. Packages <a name="packages"></a>
+The following packages are required for this project:
+- **Pandas** 2.2.2: Data manipulation and analysis
+- **Numpy** 1.26: Numerical computing
+- **Matplotlib** 3.8.4: Data visualization
+- **Scikit-learn**: Machine learning tools (for regression analysis)
+- **Seaborn**: Data visualization (for advanced plotting)
 
-The feature "Average Temperature C°", represents the average yearly temperature increase. For example, if it is 0.12, it means that the temperature in that specific location increased by 0.12 degrees Celsius.
+## 4. Environment <a name="environment"></a>
+It is recommended to use a **virtual environment** to manage dependencies. If you're using Anaconda, we have provided instructions to set up the environment.
 
-Forestland is the only feature that exhibits negative emissions due to its role as a carbon sink. Through photosynthesis, forests absorb and store carbon dioxide, effectively removing it from the atmosphere. Sustainable forest management, along with afforestation and reforestation efforts, further contribute to negative emissions by increasing carbon sequestration capacity.
+## 5. Instructions to Set Up Environment <a name="instructions-to-set-up-environment"></a>
 
-## 3. Packages <a class="anchor" id="packages"></a>
+### **Step 1: Install Anaconda**
+If Anaconda is not installed, you can download it from the [official website](https://www.anaconda.com/products/individual).
 
-To carry out all the objectives for this repo, the following necessary dependencies were loaded:
-+ `Pandas 2.2.2` and `Numpy 1.26`
-+ `Matplotlib 3.8.4`
- 
-
-## 4. Environment <a class="anchor" id="environment"></a>
-
-It's highly recommended to use a virtual environment for your projects, there are many ways to do this; we've outlined one such method below. Make sure to regularly update this section. This way, anyone who clones your repository will know exactly what steps to follow to prepare the necessary environment. The instructions provided here should enable a person to clone your repo and quickly get started.
-
-### Create the new evironment - you only need to do this once
-
+### **Step 2: Clone the Repository**
+Clone the project repository by running:
 ```bash
-# create the conda environment
-conda create --name <env>
+git clone https://github.com/mpho004/2401PTDS_Regression_Project.git
+cd 2401PTDS_Regression_Project
 ```
 
-### This is how you activate the virtual environment in a terminal and install the project dependencies
-
+### **Step 3: Create the Conda Environment**
+To create a new environment for the project, run:
 ```bash
-# activate the virtual environment
-conda activate <env>
-# install the pip package
-conda install pip
-# install the requirements for this project
+conda create --name <env_name> python=3.8
+```
+
+### **Step 4: Activate the Environment**
+Activate your environment using:
+```bash
+conda activate <env_name>
+```
+
+### **Step 5: Install Dependencies**
+Once the environment is activated, install the necessary dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-## 5. Team Members<a class="anchor" id="team-members"></a>
+### **Step 6: Verify the Installation**
+To verify that all dependencies are correctly installed, use:
+```bash
+conda list
+```
 
-| Name                                                                                        |  Email              
-|---------------------------------------------------------------------------------------------|--------------------             
-| [Jana Liebenberg-Fouche](https://github.com/Jana-Liebenberg)                                | jliebenberg-fouche@sandtech.com
-| [Edmund Dotsey](https://github.com/Edotsey)                                                 | edotsey@sandtech.com
-| [Farayi Myambo](https://github.com/Farayi-Explore)                                          | fmyambo@sandtech.com
+## 6. Team Members <a name="team-members"></a>
+- **Name** - Mpho Mathebula
+- **Team Member 1** - Davhana,Tshiwela
 
+---
 
-
-#### Additional Resources to create a README file:
-- [Make a README](https://www.makeareadme.com/)
-- [GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
-- [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
